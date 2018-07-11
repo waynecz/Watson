@@ -1,0 +1,26 @@
+{
+  "name": "watson",
+  "bugs": {
+    "url": "https://github.com/waynecz/Watson/issues"
+  },
+  "version": "1.0.0",
+  "description": "A practical Sass tool set especially for BEMer",
+  "main": "index.js",
+  "keywords": [
+    "css",
+    "bem",
+    "mixins",
+    "sass",
+    "scss"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "style": "src/_watson.scss",
+  "author": "waynecz <451578533@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waynecz/Watson.git"
+  },
+  "license": "MIT"
+}
