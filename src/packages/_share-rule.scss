@@ -1,0 +1,12 @@
+@mixin share-rule($name) {
+  $rule-name: "%shared-"+$name;
+
+  @at-root #{$rule-name} {
+    @content;
+  }
+}
+
+@mixin extend-rule($name) {
+  @extend #{"%shared-"+$name};
+}
+

@@ -1,0 +1,19 @@
+@mixin perfect-transition {
+  transition: 0.2s $perfect-timing;
+}
+
+@function ts($time, $delay: 0s) {
+  @return $time + s $delay $perfect-timing;
+}
+
+@function tx($offsetX) {
+  @return translateX($offsetX);
+}
+
+@function ty($offsetY) {
+  @return translateY($offsetY);
+}
+
+@function txy($offsetX, $offsetY) {
+  @return translate($offsetX, $offsetY);
+}

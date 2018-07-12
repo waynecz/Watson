@@ -1,0 +1,44 @@
+/*
+ * Inspired by https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+ */
+
+@mixin font-face(
+  $name: null,
+  $path: null,
+  $formats: woff2 woff ttf otf,
+  $weight: 400,
+  $style: normal
+) {
+  $src: null;
+
+  @if (type-of($formats) not list) {
+    $style: $weight;
+    $weight: $formats;
+    $formats: woff2 woff ttf otf;
+  }
+
+  @if not $name {
+    @error 'font-name is required!';
+  }
+
+  @if not $path {
+    @error 'font src is required!';
+  }
+
+  $formatsMap: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $type in $formats {
+    $format: if(map-has-key($formatsMap, $type), map-get($formatsMap, $type), $type);
+    $src: append($src, url(quote($path + "." + $type)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: local(quote($name)), $src;
+  }
+}

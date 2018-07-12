@@ -1,0 +1,118 @@
+$B: "" !default;
+$E: "" !default;
+
+/* BEM
+ -------------------------- */
+@mixin block($block) {
+  @if ($namespace) {
+    $B: $namespace + "-" + $block !global;
+  } @else {
+    $B: $block !global;
+  }
+
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin element($element) {
+  $E: $element !global;
+  $selector: &;
+  $currentSelector: "";
+
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+  }
+
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$currentSelector} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin block-element-modifier($block, $element: false, $modifier: false) {
+  $context: &;
+  $selector: $block;
+
+  @if $element {
+    $selector: $selector + $element-separator + $element
+  }
+
+  @if $modifier {
+    $selector: $selector + $modifier-separator + $modifier
+  }
+
+  @at-root {
+    #{$context} {
+      .#{$selector} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin modifier($modifier) {
+  $currentSelector: "";
+
+  @each $unit in $modifier {
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+@mixin custom-selector($relational-selector: "", $element: $E, $modifier: false, $block: $B) {
+  $modifierCombo: "";
+
+  @if $modifier {
+    $modifierCombo: $modifier-separator + $modifier;
+  }
+
+  @at-root {
+    #{&}#{$relational-selector}.#{$block
+      + $element-separator
+      + $element
+      + $modifierCombo} {
+      @content;
+    }
+  }
+}
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin with-attr($attr) {
+  $selector: &;
+
+  @at-root {
+    #{$selector}[#{$attr}] {
+      @content;
+    }
+  }
+}
+
+@mixin pseudo($pseudo) {
+  @at-root #{&}#{":#{$pseudo}"} {
+    @content;
+  }
+}

@@ -1,0 +1,50 @@
+/* Scrollbar
+ -------------------------- */
+@mixin scroll-bar($thumb-color: #333, $track-background: #fff, $width: 6px) {
+  $thumb-color: #b4bccc;
+  $track-background: #fff;
+
+  &::-webkit-scrollbar {
+    z-index: 11;
+    width: $width;
+
+    &:horizontal {
+      height: $width;
+    }
+
+    &-thumb {
+      border-radius: 5px;
+      width: $width;
+      background: $thumb-color;
+    }
+
+    &-corner {
+      background: $track-background;
+    }
+
+    &-track {
+      background: $track-background;
+
+      &-piece {
+        background: $track-background;
+        width: $width;
+      }
+    }
+  }
+}
+
+/* Placeholder
+ -------------------------- */
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+
+  &::-moz-placeholder {
+    @content
+  }
+
+  &:-ms-input-placeholder {
+    @content
+  }
+}

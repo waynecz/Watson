@@ -1,0 +1,3 @@
+@function transparent($color, $percentage) {
+  @return mix($color, transparent, $percentage * 1%);
+}

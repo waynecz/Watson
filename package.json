@@ -3,7 +3,7 @@
   "bugs": {
     "url": "https://github.com/waynecz/Watson/issues"
   },
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "A practical Sass tool set especially for BEMer",
   "main": "index.js",
   "keywords": [
