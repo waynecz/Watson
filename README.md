@@ -24,7 +24,7 @@
 
 ## Intro
 
-- BEM support in scss
+- Mainly to simplify the way writing Nested BEM
 - Awesome tools which are most of use
 
 <br>
@@ -43,9 +43,9 @@
 npm i watson -D
 ```
 
-Then in your scss entry
+Then import Watson at scss entry
 
-```css
+```scss
 @import '~watson';
 ```
 
@@ -53,43 +53,45 @@ Then in your scss entry
 
 ## What's Watson got
 
-Watson is devote itself to help Scsser write BEM happier hence the most blazing features would be the comfortable way Watson giving for writing `Nested BEM`
+Watson is devote itself to help write BEM fast and furious
 
 ### BEM
 
-Other awesome features will fellow blow 😋
+<a href="#tools">See other tools below 😋</a>
 
 <br>
 
 ## Config
 
 ```scss
-$block-modifier: '_';
+@import '~watson';
+/* cover variables after import watson  */
+$block-modifier: '_' !global;
 ```
 
 <br>
 
-## Full list of tools
+<h2 id="tools"> Full list of tools</h2>
 
-### media query
+##### ▸ media query
 
-### share-rule
+#### ▸ share-rule
 
-### font-face
+#### ▸ font-face
 
-### shapes
+#### ▸ shapes
 
-### transform
+#### ▸ transform
 
-### position
+#### ▸ position
 
-### basic fonts
+#### ▸ basic fonts
 
-### webkit
+#### ▸ webkit
 
-### text
+#### ▸ text
 
-### others
+#### ▸ others
 
 <br>
 
