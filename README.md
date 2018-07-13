@@ -1,7 +1,7 @@
 <br>
 
 <p align="center">
-  <img width="240px" src="./watson.png" alt="logo" />
+  <img width="210px" src="./watson.png" alt="logo" />
 </p>
 <br>
 
@@ -40,18 +40,20 @@
 ## Install and Usage
 
 ```bash
-npm i watson -D
+npm i watson-scss -D
 ```
 
 Then import Watson at scss entry
 
 ```scss
 @import '~watson';
+
+@include block;
 ```
 
 <br>
 
-## What's Watson got
+## What Watson got
 
 Watson is devote itself to help write BEM fast and furious
 
@@ -61,10 +63,11 @@ Watson is devote itself to help write BEM fast and furious
 
 <br>
 
-## Config
+## Custom configuration
 
 ```scss
-@import '~watson';
+@import '~watson-scss';
+
 /* cover variables after import watson  */
 $block-modifier: '_' !global;
 ```

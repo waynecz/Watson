@@ -1,10 +1,10 @@
 {
-  "name": "watson",
+  "name": "watson-scss",
   "bugs": {
     "url": "https://github.com/waynecz/Watson/issues"
   },
-  "version": "1.0.0-alpha.1",
-  "description": "A practical Sass tool set especially for BEMer",
+  "version": "1.0.0-alpha.2",
+  "description": "A practical set of Sass mixins for BEMer",
   "main": "index.js",
   "keywords": [
     "css",
@@ -13,6 +13,10 @@
     "sass",
     "scss"
   ],
+  "eyeglass": {
+    "needs": "*",
+    "exports": "eyeglass-exports.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
