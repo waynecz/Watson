@@ -3,5 +3,6 @@ node_modules
 .vscode
 .gitignore
 yarn.lock
+assets
 yarn-error.log
 package-lock.json

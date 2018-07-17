@@ -1,8 +1,8 @@
-@mixin position($position, $location: 0 0 auto auto, $z-index) {
+@mixin position($position, $top-left: 0 0, $bottom-right: auto auto, $z-index) {
   position: $position;
   top: nth($location, 0);
-  left: nth($location, 0);
-  bottom: nth($location, 0);
-  right: nth($location, 0);
+  left: nth($location, 1);
+  bottom: nth($bottom-right, 0);
+  right: nth($bottom-right, 1);
   z-index: $z-index;
 }

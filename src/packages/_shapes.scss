@@ -1,7 +1,8 @@
-@mixin circle($diameter) {
+@mixin circle($diameter, $color: transparent) {
   width: $diameter;
   height: $diameter;
   border-radius: 50%;
+  background: $color;
 }
 
 @mixin square($width) {
@@ -9,16 +10,10 @@
   height: $width;
 }
 
-@mixin triangle(
-  $direction,
-  $width,
-  $height,
-  $color
-) {
-  @if not index(
-    "up" "up-right" "right" "down-right" "down" "down-left" "left" "up-left",
-    $direction
-  ) {
+@mixin triangle($direction, $width, $height, $color) {
+  @if not
+    index('up' 'up-right' 'right' 'down-right' 'down' 'down-left' 'left' 'up-left', $direction)
+  {
     @error "Direction must be `up`, `up-right`, `right`, `down-right`, " +
            "`down`, `down-left`, `left` or `up-left`.";
   } @else {
@@ -26,28 +21,28 @@
     height: 0;
     width: 0;
 
-    @if $direction == "up" {
+    @if $direction == 'up' {
       border-color: transparent transparent $color;
       border-width: 0 ($width / 2) $height;
-    } @else if $direction == "up-right" {
+    } @else if $direction == 'up-right' {
       border-color: transparent $color transparent transparent;
       border-width: 0 $width $width 0;
-    } @else if $direction == "right" {
+    } @else if $direction == 'right' {
       border-color: transparent transparent transparent $color;
       border-width: ($height / 2) 0 ($height / 2) $width;
-    } @else if $direction == "down-right" {
+    } @else if $direction == 'down-right' {
       border-color: transparent transparent $color;
       border-width: 0 0 $width $width;
-    } @else if $direction == "down" {
+    } @else if $direction == 'down' {
       border-color: $color transparent transparent;
       border-width: $height ($width / 2) 0;
-    } @else if $direction == "down-left" {
+    } @else if $direction == 'down-left' {
       border-color: transparent transparent transparent $color;
       border-width: $width 0 0 $width;
-    } @else if $direction == "left" {
+    } @else if $direction == 'left' {
       border-color: transparent $color transparent transparent;
       border-width: ($height / 2) $width ($height / 2) 0;
-    } @else if $direction == "up-left" {
+    } @else if $direction == 'up-left' {
       border-color: $color transparent transparent;
       border-width: $width $width 0 0;
     }
