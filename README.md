@@ -156,7 +156,7 @@ $namespace: 'ele' !global;
 ...
 ```
 
-[look up more config here](./src/core/_config.scss)
+[Look up more configuration here](./src/core/_config.scss)
 
 <br>
 
