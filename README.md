@@ -22,12 +22,12 @@
 
 <br>
 
-> I extremely do recommend to use Webstorm writing SASS since it's smartest auto-completion saving me much a time
+> I do recommend to use Webstorm writing SASS since it's smartest auto-completion saving me much a time
 
 ## Intro
 
 - Mainly to simplify the way writing Nested BEM
-- Awesome tools which are most of use
+- Tools which are most of use
 
 <br>
 
@@ -249,6 +249,12 @@ transform: translateX(3px) translateY(3px) translate(2px, 3px);
 @include scroll-bar(#333, #fff, 3px);
 ```
 
+```scss
+@include placeholder {
+  color: #eee;
+}
+```
+
 #### ▸ ellipsis
 
 ```scss
@@ -284,3 +290,7 @@ color: transparent(#000, 60);
 // convert to
 color: rgba(0, 0, 0, 0.6);
 ```
+
+<br>
+
+## Feel free to add your marvelous tools to Watson
