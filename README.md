@@ -6,8 +6,8 @@
 <br>
 
 <p align="center">
-  <img alt="GitHub release" src="https://img.shields.io/badge/release-v1.0.0-orange.svg?style=for-the-badge"/>
-  <img alt="SCSS" src="https://img.shields.io/badge/SCSS-3.4-green.svg?style=for-the-badge"/>
+  <img alt="GitHub release" src="https://img.shields.io/badge/release-v1.0.1-orange.svg?style=for-the-badge"/>
+  <img alt="SASS" src="https://img.shields.io/badge/SASS-3.4-green.svg?style=for-the-badge"/>
 </p>
 
 <br>
@@ -183,8 +183,7 @@ $namespace: 'ele' !global;
   font-family: name;
   font-style: italic;
   font-weight: bold;
-  src: local($name), url('//path/name.woff2') format('woff2'), url('//path/name.woff') format('woff'),
-    url('//path/name.ttf') format('truetype');
+  src: local($name), url('//path/name.woff2') format('woff2'), url('//path/name.woff') format('woff'), url('//path/name.ttf') format('truetype');
 }
 ```
 
