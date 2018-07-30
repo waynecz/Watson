@@ -1,12 +1,14 @@
-@import "core/config";
-@import "core/helpers";
+@import 'core/config';
+@import 'core/helpers';
 
-@import "packages/basic-fonts";
-@import "packages/BEM";
-@import "packages/font-face";
-@import "packages/media-query";
-@import "packages/others";
-@import "packages/px-to-vw";
-@import "packages/transform";
-@import "packages/share-rule";
-@import "packages/webkit";
+@import 'packages/basic-fonts';
+@import 'packages/BEM';
+@import 'packages/font-face';
+@import 'packages/media-query';
+@import 'packages/others';
+@import 'packages/px-to-vw';
+@import 'packages/shapes';
+@import 'packages/share-rule';
+@import 'packages/text';
+@import 'packages/transform';
+@import 'packages/webkit';

@@ -3,7 +3,7 @@
   "bugs": {
     "url": "https://github.com/waynecz/Watson/issues"
   },
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A practical set of Sass mixins for BEMer",
   "main": "src/_watson.scss",
   "keywords": [
