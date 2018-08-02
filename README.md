@@ -22,7 +22,7 @@
 
 <br>
 
-> I do recommend to use Webstorm writing SASS since it's smartest auto-completion saving me much a time
+> Recommend to use Webstorm writing SASS since it's smartest auto-completion must savie you much a time
 
 ## Intro
 
