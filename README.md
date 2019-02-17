@@ -14,20 +14,23 @@
 
 <p align="center">
   <b>
-    <a href="https://zhuanlan.zhihu.com/p/28650879">SASS:简单点, 写 BEM 的方式简单点</a>
-    |
-    <a href="https://github.com/waynecz/Holmes">Holmes: Server boilerplate you might need</a>
+    <a href="https://zhuanlan.zhihu.com/p/28650879">Sass: 简单点, 写 BEM 的方式简单点</a>
   </b>
 </p>
 
 <br>
 
-> Recommend to use Webstorm writing SASS since it's smartest auto-completion must savie you much a time
-
 ## Intro
 
 - Mainly to simplify the way writing Nested BEM
 - Tools which are most of use
+
+<br>
+
+## Supporting facilities
+
+1. [react-bem-classname](https://github.com/waynecz/react-bem-classname) for generating BEM classNames easily.
+2. [watson-snippet](https://github.com/waynecz/watson-snippet) vscode extension for coding faster.
 
 <br>
 
