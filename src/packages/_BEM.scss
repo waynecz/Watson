@@ -93,9 +93,32 @@ $E: "" !default;
   }
 }
 
+// .class + .class
+@mixin adjacent {
+  $selector: &;
+
+  @at-root {
+    #{$selector} + #{$selector} {
+      @content;
+    }
+  }
+}
+
+// .is-state
 @mixin when($state) {
   @at-root {
     &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+// .class.class
+@mixin emphasize {
+  $selector: &;
+
+  @at-root {
+    #{$selector}#{$selector} {
       @content;
     }
   }
@@ -111,8 +134,36 @@ $E: "" !default;
   }
 }
 
-@mixin pseudo($pseudo) {
-  @at-root #{&}#{":#{$pseudo}"} {
+@mixin pseudo($class) {
+  @at-root #{&}#{":#{$class}"} {
     @content;
+  }
+}
+
+@mixin pseudo-class($classes) {
+  $currentSelector: "";
+
+  @each $unit in $classes {
+    $currentSelector: #{$currentSelector + & + ":" + $unit + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+@mixin pseudo-element($elements) {
+  $currentSelector: "";
+
+  @each $unit in $elements {
+    $currentSelector: #{$currentSelector + & + "::" + $unit + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
   }
 }

@@ -6,7 +6,7 @@
 <br>
 
 <p align="center">
-  <img alt="GitHub release" src="https://img.shields.io/badge/release-v1.0.4-orange.svg?style=for-the-badge"/>
+  <img alt="GitHub release" src="https://img.shields.io/badge/release-v1.0.6-orange.svg?style=for-the-badge"/>
   <img alt="SASS" src="https://img.shields.io/badge/SASS-3.4-green.svg?style=for-the-badge"/>
 </p>
 
@@ -145,7 +145,7 @@ which'll convert to
 
 <br>
 
-## Custom configuration
+## Configuration
 
 ```scss
 @import '~watson-scss';

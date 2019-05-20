@@ -4,6 +4,16 @@
   @return $selector;
 }
 
+@function containsElement($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, $element-separator) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
 @function containsModifier($selector) {
   $selector: selectorToString($selector);
 
@@ -35,5 +45,5 @@
 }
 
 @function hitAllSpecialNestRule($selector) {
-  @return containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector);
+  @return containsElement($selector) or containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector);
 }
